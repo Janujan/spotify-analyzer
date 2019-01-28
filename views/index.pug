@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p Please enter a Playlist ID
+
+  form(method='POST' action='/search/')
+    div.form-group
+      label(for='playlist') Playlist:
+      input#playlist.form-control(type='text', placeholder='id' name='playlist_id')
+      button.btn.btn-primary(type='submit') Analyze
