@@ -2,29 +2,30 @@ extends layout
 
 block content
   h1= title
-  h3 Playlist Average Stats
-  h4 Danceablity: 
-    = stats.average_dance
-  h4 Energy: 
-    = stats.average_energy
-  h4 Loudness: 
-    = stats.average_loudness
-  h4 Speechiness: 
-    = stats.average_speechiness
-  h4 Acousticness: 
-    = stats.average_acousticness
-  h4 Instrumentalness: 
-    = stats.average_instrumental
-  h4 Liveness: 
-    = stats.average_liveness
-  h4 Valence: 
-    = stats.average_valence
-  h4 Tempo: 
-    = stats.average_tempo
-  ul
-    each item in data
-      a(href=item.href)
-        li= item.name
+  if stats
+    h3 Playlist Average Stats
+    h4 Danceablity: 
+      = stats.average_dance
+    h4 Energy: 
+      = stats.average_energy
+    h4 Loudness: 
+      = stats.average_loudness
+    h4 Speechiness: 
+      = stats.average_speechiness
+    h4 Acousticness: 
+      = stats.average_acousticness
+    h4 Instrumentalness: 
+      = stats.average_instrumental
+    h4 Liveness: 
+      = stats.average_liveness
+    h4 Valence: 
+      = stats.average_valence
+    h4 Tempo: 
+      = stats.average_tempo
+    ul
+      each item in data
+        a(href=item.href)
+          li= item.name
   //- ul 
   //-   each track in analyze
   //-     li= track.danceability

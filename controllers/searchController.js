@@ -93,5 +93,6 @@ exports.results = function(req, res) {
     })
     .catch(function(err) {
         console.log('Unfortunately, something has gone wrong.', err.message);
+        res.render('results', {title: 'Sorry that playlist wasnt found'});
     });
 };
